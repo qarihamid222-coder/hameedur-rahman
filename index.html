@@ -1,87 +1,744 @@
-<!doctype html>
-<html lang="ur" dir="rtl">
+
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="حمیدالرحمن — Online Arabic Grammar, Quran and Arabic Language Classes">
-<title>حمیدالرحمن | Online Arabic & Quran Classes</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Learn Arabic Grammar, Arabic Language, Quran Reading and Tajweed through online classes for children and adults."
+  >
+
+  <meta name="theme-color" content="#064e3b">
+
+  <title>Hameed Ur Rahman | Arabic Grammar & Quran Academy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-<header class="header">
-  <a class="brand" href="#home"><img src="assets/logo.png" alt="حمیدالرحمن logo"><span><b>حمیدالرحمن</b><small>Arabic Grammar • Quran • Arabic Language</small></span></a>
-  <button class="hamburger" aria-label="Menu">☰</button>
-  <nav>
-    <a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
-  </nav>
-</header>
 
-<main>
-<section id="home" class="hero">
-  <div class="hero-text">
-    <div class="badge">ONLINE CLASSES • اردو • العربية • ENGLISH</div>
-    <h1>عربی گرامر، قرآن اور عربی زبان<br><em>آن لائن سیکھیں</em></h1>
-    <p>بچوں اور بڑوں کے لیے باقاعدہ، آسان اور توجہ کے ساتھ آن لائن کلاسز۔ گھر بیٹھے عربی زبان اور قرآن کی تعلیم حاصل کریں۔</p>
-    <div class="buttons"><a class="btn primary" href="#contact">کلاس کے لیے رابطہ کریں</a><a class="btn light" href="#courses">کورسز دیکھیں</a></div>
-    <div class="ticks"><span>✓ بچوں کے لیے</span><span>✓ بڑوں کے لیے</span><span>✓ آن لائن کلاسز</span></div>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p data-i18n="announcement">
+      Online Arabic Grammar & Quran Classes for All Ages
+    </p>
   </div>
-  <div class="hero-logo"><img src="assets/logo.png" alt="حمیدالرحمن Online Classes"></div>
-</section>
 
-<section id="courses" class="section">
-  <div class="heading"><small>COURSES</small><h2>ہمارے کورسز</h2><p>اپنی ضرورت کے مطابق کورس منتخب کریں۔</p></div>
-  <div class="cards">
-    <article><div class="round">أ</div><h3>Arabic Grammar</h3><p>نحو، صرف، جملوں کی ساخت اور عربی قواعد آسان انداز میں۔</p><a href="#contact">معلومات حاصل کریں →</a></article>
-    <article><div class="round">ق</div><h3>Quran Classes</h3><p>بچوں اور بڑوں کے لیے قرآن کی آن لائن تعلیم اور باقاعدہ رہنمائی۔</p><a href="#contact">معلومات حاصل کریں →</a></article>
-    <article><div class="round">ع</div><h3>Arabic Language</h3><p>الفاظ، پڑھنے، سمجھنے اور روزمرہ عربی گفتگو کی عملی مشق۔</p><a href="#contact">معلومات حاصل کریں →</a></article>
-  </div>
-</section>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
 
-<section id="about" class="section about">
-  <div><small>ABOUT</small><h2>حمیدالرحمن کے ساتھ عربی سیکھیں</h2><p>مقصد عربی گرامر، قرآن اور عربی زبان کو بچوں اور بڑوں کے لیے آسان اور قابلِ فہم بنانا ہے۔</p>
-  <ul><li>اردو، عربی اور English میں رہنمائی</li><li>بچوں اور بڑوں کے لیے کلاسز</li><li>آن لائن سیکھنے کی سہولت</li><li>AI Assistant کے ذریعے ابتدائی سوال و جواب</li></ul></div>
-  <img src="assets/logo.png" alt="حمیدالرحمن logo">
-</section>
+      <a class="brand" href="#home" aria-label="Hameed Ur Rahman Academy Home">
+        <span class="brand-mark" aria-hidden="true">هـ</span>
 
-<section class="section assistant">
-  <div class="assistant-box"><div><small>AI ASSISTANT</small><h2>کلاس کے بارے میں سوال پوچھیں</h2><p>مثلاً: "Arabic Grammar کی کلاس کیسے لینی ہے؟"</p></div><button class="btn primary" onclick="openChat()">AI Assistant کھولیں</button></div>
-</section>
+        <span class="brand-text">
+          <strong>HAMEED UR RAHMAN</strong>
+          <small data-i18n="brandSubtitle">
+            ARABIC GRAMMAR & QURAN ACADEMY
+          </small>
+        </span>
+      </a>
 
-<section id="reviews" class="section">
-  <div class="heading"><small>STUDENT REVIEWS</small><h2>طلبہ کے تاثرات</h2><p>یہ حصہ بعد میں حقیقی طلبہ کے verified comments/reviews سے بھرا جائے گا۔</p></div>
-  <div class="reviews">
-    <article><div>★★★★★</div><p>کلاس کا انداز آسان اور سمجھنے میں مددگار ہے۔</p><b>— طالب علم</b></article>
-    <article><div>★★★★★</div><p>عربی گرامر کے قواعد کو مرحلہ وار سمجھنے میں بہت مدد ملی۔</p><b>— طالب علم</b></article>
-    <article><div>★★★★★</div><p>آن لائن کلاس کے لیے رابطہ اور معلومات کا طریقہ آسان ہے۔</p><b>— طالب علم</b></article>
-  </div>
-</section>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<section id="faq" class="section">
-  <div class="heading"><small>FAQ</small><h2>عام سوالات</h2></div>
-  <div class="faq">
-    <details><summary>کیا بچوں کے لیے کلاس ہے؟</summary><p>جی ہاں، بچوں کے لیے بھی آن لائن کلاسز دستیاب ہوں گی۔</p></details>
-    <details><summary>کیا بڑوں کے لیے بھی کلاس ہے؟</summary><p>جی ہاں، بڑوں کے لیے عربی گرامر، عربی زبان اور قرآن کی کلاسز ہیں۔</p></details>
-    <details><summary>کلاس کس زبان میں ہوگی؟</summary><p>اردو، عربی اور English میں رہنمائی دی جا سکتی ہے۔</p></details>
-    <details><summary>کلاس کے لیے کیسے رابطہ کریں؟</summary><p>نیچے موجود WhatsApp بٹن دبائیں اور اپنی مطلوبہ کلاس لکھ کر پیغام بھیجیں۔</p></details>
-  </div>
-</section>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#courses" data-i18n="navCourses">Courses</a>
+        <a href="#benefits" data-i18n="navBenefits">Why Choose Us</a>
+        <a href="#faq" data-i18n="navFaq">FAQs</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
 
-<section id="contact" class="section contact">
-  <div><small>CONTACT</small><h2>کلاس کے لیے رابطہ کریں</h2><p>WhatsApp Business پر پیغام بھیجیں:</p><strong class="phone">03237185867</strong><a class="btn whatsapp" href="https://wa.me/923237185867" target="_blank" rel="noopener">WhatsApp پر رابطہ کریں</a></div>
-  <div class="contact-logo"><img src="assets/logo.png" alt="حمیدالرحمن"></div>
-</section>
-</main>
+      <div class="header-actions">
+        <label class="visually-hidden" for="languageSelect">
+          Select language
+        </label>
 
-<footer><b>حمیدالرحمن</b><span>Arabic Grammar • Quran • Arabic Language</span><a href="https://wa.me/923237185867" target="_blank">WhatsApp: 03237185867</a></footer>
+        <select id="languageSelect" class="language-select">
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="ur">اردو</option>
+        </select>
 
-<div class="chat" id="chat">
-  <div class="chat-head">🤖 AI Assistant <button onclick="closeChat()">×</button></div>
-  <div class="chat-body" id="chatBody"><div class="bot">السلام علیکم! عربی گرامر، قرآن اور عربی لینگویج کلاسز کے بارے میں سوال پوچھیں۔</div></div>
-  <form id="chatForm"><input id="chatInput" placeholder="اپنا سوال لکھیں..." autocomplete="off"><button>➤</button></form>
-</div>
-<script src="script.js"></script>
+        <a href="#contact" class="button button-small button-gold">
+          <span data-i18n="navEnroll">Enroll Now</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-decoration hero-decoration-one"></div>
+      <div class="hero-decoration hero-decoration-two"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            <span class="eyebrow-icon" aria-hidden="true">✦</span>
+            <span data-i18n="heroEyebrow">
+              YOUR JOURNEY TO ARABIC & QURAN
+            </span>
+          </div>
+
+          <h1 data-i18n="heroTitle">
+            Learn Arabic Grammar & Understand the Quran
+          </h1>
+
+          <p class="hero-description" data-i18n="heroDescription">
+            Discover Arabic grammar, develop your language skills,
+            and learn Quran reading and Tajweed through online classes
+            designed for children and adults.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#courses" class="button button-gold">
+              <span data-i18n="heroExplore">Explore Our Courses</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+
+            <a href="#contact" class="button button-outline">
+              <span data-i18n="heroContact">Contact Us</span>
+            </a>
+          </div>
+
+          <div class="hero-points">
+            <span>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <span data-i18n="heroPointOne">Online Learning</span>
+            </span>
+
+            <span>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <span data-i18n="heroPointTwo">Children & Adults</span>
+            </span>
+
+            <span>
+              <span class="check-icon" aria-hidden="true">✓</span>
+              <span data-i18n="heroPointThree">Flexible Learning</span>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Decorative Arabic Feature Card -->
+        <div class="hero-visual">
+          <div class="hero-card">
+
+            <div class="hero-card-top">
+              <span class="ornament" aria-hidden="true">✦</span>
+              <span data-i18n="heroCardLabel">LEARN WITH PURPOSE</span>
+              <span class="ornament" aria-hidden="true">✦</span>
+            </div>
+
+            <div class="arabic-art" lang="ar" dir="rtl">
+              <span class="arabic-art-small">اللُّغَةُ الْعَرَبِيَّةُ</span>
+              <span class="arabic-art-large">العربية</span>
+              <span class="arabic-art-gold">لغة القرآن الكريم</span>
+            </div>
+
+            <div class="hero-card-divider">
+              <span></span>
+              <span class="divider-star" aria-hidden="true">✦</span>
+              <span></span>
+            </div>
+
+            <p class="hero-card-caption" data-i18n="heroCardCaption">
+              Arabic Language · Grammar · Quran Learning
+            </p>
+
+          </div>
+
+          <div class="floating-badge badge-top">
+            <span aria-hidden="true">📖</span>
+            <span data-i18n="badgeQuran">Quran Learning</span>
+          </div>
+
+          <div class="floating-badge badge-bottom">
+            <span aria-hidden="true">✍️</span>
+            <span data-i18n="badgeGrammar">Arabic Grammar</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Learning Areas -->
+    <section class="learning-strip" aria-label="Learning areas">
+      <div class="container learning-strip-inner">
+        <span data-i18n="stripOne">Arabic Grammar</span>
+        <span class="strip-separator" aria-hidden="true">✦</span>
+        <span data-i18n="stripTwo">Quran Reading</span>
+        <span class="strip-separator" aria-hidden="true">✦</span>
+        <span data-i18n="stripThree">Tajweed</span>
+        <span class="strip-separator" aria-hidden="true">✦</span>
+        <span data-i18n="stripFour">Arabic Language</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="about-art-card">
+            <span class="about-art-icon" aria-hidden="true">۞</span>
+
+            <p class="about-art-arabic" lang="ar" dir="rtl">
+              أَهْلًا وَسَهْلًا
+            </p>
+
+            <p class="about-art-caption" data-i18n="aboutArtCaption">
+              A place to learn and grow
+            </p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-kicker" data-i18n="aboutKicker">
+            ABOUT OUR ACADEMY
+          </span>
+
+          <h2 data-i18n="aboutTitle">
+            Build Your Arabic Skills with Confidence
+          </h2>
+
+          <p data-i18n="aboutParagraphOne">
+            Our online learning platform brings Arabic grammar,
+            Arabic language and Quran learning together in one place.
+          </p>
+
+          <p data-i18n="aboutParagraphTwo">
+            Whether you are beginning your learning journey or
+            improving your existing skills, explore a learning path
+            suitable for your goals.
+          </p>
+
+          <a href="#courses" class="text-link">
+            <span data-i18n="aboutLink">Discover Our Courses</span>
+            <span aria-hidden="true">↗️</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="section courses-section" id="courses">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker" data-i18n="coursesKicker">
+            OUR LEARNING PROGRAMS
+          </span>
+
+          <h2 data-i18n="coursesTitle">
+            Explore Our Online Courses
+          </h2>
+
+          <p data-i18n="coursesDescription">
+            Choose a learning area that matches your interests and goals.
+          </p>
+        </div>
+
+        <div class="courses-grid">
+
+          <article class="course-card">
+            <div class="course-icon icon-green" aria-hidden="true">ن</div>
+
+            <span class="course-tag" data-i18n="courseTagLanguage">
+              LANGUAGE
+            </span>
+
+            <h3 data-i18n="courseOneTitle">Arabic Grammar</h3>
+
+            <p data-i18n="courseOneDescription">
+              Learn essential Arabic grammar, sentence structure
+              and the foundations of Nahw and Sarf.
+            </p>
+
+            <a href="#contact" class="course-link">
+              <span data-i18n="courseLearnMore">Learn More</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-icon icon-gold" aria-hidden="true">۞</div>
+
+            <span class="course-tag" data-i18n="courseTagQuran">
+              QURAN
+            </span>
+
+            <h3 data-i18n="courseTwoTitle">Quran Reading</h3>
+
+            <p data-i18n="courseTwoDescription">
+              Develop Quran reading skills step by step with
+              appropriate guidance and practice.
+            </p>
+
+            <a href="#contact" class="course-link">
+              <span data-i18n="courseLearnMore">Learn More</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-icon icon-green" aria-hidden="true">۩</div>
+
+            <span class="course-tag" data-i18n="courseTagQuran">
+              QURAN
+            </span>
+
+            <h3 data-i18n="courseThreeTitle">Quran with Tajweed</h3>
+
+            <p data-i18n="courseThreeDescription">
+              Study the principles of Tajweed and practise
+              Quran recitation with suitable instruction.
+            </p>
+
+            <a href="#contact" class="course-link">
+              <span data-i18n="courseLearnMore">Learn More</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-icon icon-gold" aria-hidden="true">ع</div>
+
+            <span class="course-tag" data-i18n="courseTagLanguage">
+              LANGUAGE
+            </span>
+
+            <h3 data-i18n="courseFourTitle">Arabic Language</h3>
+
+            <p data-i18n="courseFourDescription">
+              Improve Arabic reading, writing, vocabulary
+              and language comprehension.
+            </p>
+
+            <a href="#contact" class="course-link">
+              <span data-i18n="courseLearnMore">Learn More</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-icon icon-green" aria-hidden="true">ك</div>
+
+            <span class="course-tag" data-i18n="courseTagLanguage">
+              LANGUAGE
+            </span>
+
+            <h3 data-i18n="courseFiveTitle">Quranic Arabic</h3>
+
+            <p data-i18n="courseFiveDescription">
+              Explore Arabic vocabulary and grammar that can
+              support your understanding of Quranic text.
+            </p>
+
+            <a href="#contact" class="course-link">
+              <span data-i18n="courseLearnMore">Learn More</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="course-card">
+            <div class="course-icon icon-gold" aria-hidden="true">✧</div>
+
+            <span class="course-tag" data-i18n="courseTagStudents">
+              FOR ALL AGES
+            </span>
+
+            <h3 data-i18n="courseSixTitle">Kids & Adults Classes</h3>
+
+            <p data-i18n="courseSixDescription">
+              Explore suitable online learning options for
+              children, teenagers and adult learners.
+            </p>
+
+            <a href="#contact" class="course-link">
+              <span data-i18n="courseLearnMore">Learn More</span>
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section benefits-section" id="benefits">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-kicker" data-i18n="benefitsKicker">
+            YOUR LEARNING JOURNEY
+          </span>
+
+          <h2 data-i18n="benefitsTitle">
+            Learning Designed Around You
+          </h2>
+
+          <p data-i18n="benefitsDescription">
+            Discover a convenient way to learn Arabic and Quran online.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">⌂</span>
+            <h3 data-i18n="benefitOneTitle">Learn From Home</h3>
+            <p data-i18n="benefitOneDescription">
+              Join your online learning sessions from a suitable place.
+            </p>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">◎</span>
+            <h3 data-i18n="benefitTwoTitle">Different Learning Levels</h3>
+            <p data-i18n="benefitTwoDescription">
+              Explore learning options according to your current skills.
+            </p>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">✎</span>
+            <h3 data-i18n="benefitThreeTitle">Guided Practice</h3>
+            <p data-i18n="benefitThreeDescription">
+              Strengthen your learning through practice and revision.
+            </p>
+          </article>
+
+          <article class="benefit-item">
+            <span class="benefit-icon" aria-hidden="true">◇</span>
+            <h3 data-i18n="benefitFourTitle">Flexible Learning</h3>
+            <p data-i18n="benefitFourDescription">
+              Contact us to discuss a schedule that suits your needs.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container cta-content">
+
+        <div>
+          <span class="section-kicker cta-kicker" data-i18n="ctaKicker">
+            START YOUR JOURNEY
+          </span>
+
+          <h2 data-i18n="ctaTitle">
+            Ready to Begin Learning?
+          </h2>
+
+          <p data-i18n="ctaDescription">
+            Contact us to ask about courses, class arrangements
+            and available learning options.
+          </p>
+        </div>
+
+        <a href="#contact" class="button button-gold">
+          <span data-i18n="ctaButton">Get in Touch</span>
+          <span aria-hidden="true">↗️</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+      <div class="container faq-container">
+
+        <div class="section-heading">
+          <span class="section-kicker" data-i18n="faqKicker">
+            QUESTIONS & ANSWERS
+          </span>
+
+          <h2 data-i18n="faqTitle">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary data-i18n="faqOneQuestion">
+              Can children and adults join the classes?
+            </summary>
+
+            <p data-i18n="faqOneAnswer">
+              The academy offers learning categories for children
+              and adults. Contact us to discuss a suitable course.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faqTwoQuestion">
+              Which subjects can I study?
+            </summary>
+
+            <p data-i18n="faqTwoAnswer">
+              You can enquire about Arabic grammar, Arabic language,
+              Quran reading, Tajweed and Quranic Arabic.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faqThreeQuestion">
+              How can I ask about admission?
+            </summary>
+
+            <p data-i18n="faqThreeAnswer">
+              Use the contact form below to send an enquiry.
+              The form will open your email application when submitted.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary data-i18n="faqFourQuestion">
+              Are classes conducted online?
+            </summary>
+
+            <p data-i18n="faqFourAnswer">
+              This website is designed for online class enquiries.
+              Please contact the academy to confirm arrangements.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-content">
+          <span class="section-kicker" data-i18n="contactKicker">
+            CONTACT THE ACADEMY
+          </span>
+
+          <h2 data-i18n="contactTitle">
+            Let's Discuss Your Learning Goals
+          </h2>
+
+          <p data-i18n="contactDescription">
+            Send us your enquiry about Arabic grammar, Quran
+            classes or available learning options.
+          </p>
+
+          <div class="contact-note">
+            <span class="contact-note-icon" aria-hidden="true">✉️</span>
+
+            <div>
+              <strong data-i18n="contactNoteTitle">
+                Course Enquiries
+              </strong>
+
+              <p data-i18n="contactNoteDescription">
+                Complete the form to prepare an enquiry by email.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+
+          <div class="form-heading">
+            <h3 data-i18n="formTitle">Send an Enquiry</h3>
+            <p data-i18n="formDescription">
+              Fill in the details below.
+            </p>
+          </div>
+
+          <label for="studentName" data-i18n="formNameLabel">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="studentName"
+            name="name"
+            autocomplete="name"
+            required
+            data-i18n-placeholder="formNamePlaceholder"
+            placeholder="Enter your name"
+          >
+
+          <label for="studentEmail" data-i18n="formEmailLabel">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            id="studentEmail"
+            name="email"
+            autocomplete="email"
+            required
+            data-i18n-placeholder="formEmailPlaceholder"
+            placeholder="Enter your email"
+          >
+
+          <label for="courseChoice" data-i18n="formCourseLabel">
+            Course of Interest
+          </label>
+
+          <select id="courseChoice" name="course" required>
+            <option value="" data-i18n="formCoursePlaceholder">
+              Select a course
+            </option>
+
+            <option value="Arabic Grammar" data-i18n="courseOneTitle">
+              Arabic Grammar
+            </option>
+
+            <option value="Quran Reading" data-i18n="courseTwoTitle">
+              Quran Reading
+            </option>
+
+            <option value="Quran with Tajweed" data-i18n="courseThreeTitle">
+              Quran with Tajweed
+            </option>
+
+            <option value="Arabic Language" data-i18n="courseFourTitle">
+              Arabic Language
+            </option>
+
+            <option value="Quranic Arabic" data-i18n="courseFiveTitle">
+              Quranic Arabic
+            </option>
+
+            <option value="Kids & Adults Classes" data-i18n="courseSixTitle">
+              Kids & Adults Classes
+            </option>
+          </select>
+
+          <label for="studentMessage" data-i18n="formMessageLabel">
+            Your Message
+          </label>
+
+          <textarea
+            id="studentMessage"
+            name="message"
+            rows="4"
+            required
+            data-i18n-placeholder="formMessagePlaceholder"
+            placeholder="How can we help you?"
+          ></textarea>
+
+          <button type="submit" class="button button-gold form-submit">
+            <span data-i18n="formSubmit">Prepare Email Enquiry</span>
+            <span aria-hidden="true">↗️</span>
+          </button>
+
+          <p class="form-disclaimer" data-i18n="formDisclaimer">
+            Your email application will open to review and send your enquiry.
+          </p>
+
+          <p
+            class="form-status"
+            id="formStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a class="brand footer-brand-link" href="#home">
+          <span class="brand-mark" aria-hidden="true">هـ</span>
+
+          <span class="brand-text">
+            <strong>HAMEED UR RAHMAN</strong>
+            <small>ARABIC GRAMMAR & QURAN ACADEMY</small>
+          </span>
+        </a>
+
+        <p data-i18n="footerDescription">
+          A learning destination for Arabic grammar, Arabic language
+          and Quran education.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3 data-i18n="footerExplore">Explore</h3>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#courses" data-i18n="navCourses">Courses</a>
+        <a href="#benefits" data-i18n="navBenefits">Why Choose Us</a>
+        <a href="#faq" data-i18n="navFaq">FAQs</a>
+      </div>
+
+      <div class="footer-links">
+        <h3 data-i18n="footerCourses">Learning</h3>
+        <a href="#courses" data-i18n="courseOneTitle">Arabic Grammar</a>
+        <a href="#courses" data-i18n="courseTwoTitle">Quran Reading</a>
+        <a href="#courses" data-i18n="courseThreeTitle">Quran with Tajweed</a>
+        <a href="#courses" data-i18n="courseFourTitle">Arabic Language</a>
+      </div>
+
+      <div class="footer-links">
+        <h3 data-i18n="footerContact">Get in Touch</h3>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#contact" data-i18n="navEnroll">Enroll Now</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>
+          © <span id="currentYear"></span>
+          Hameed Ur Rahman Arabic Grammar & Quran Academy.
+        </p>
+
+        <a href="#home" class="back-to-top" data-i18n="backToTop">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
