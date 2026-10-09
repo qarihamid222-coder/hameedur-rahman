@@ -1,17 +1,138 @@
-const chat=document.getElementById("chat");
-function openChat(){chat.style.display="block"}
-function closeChat(){chat.style.display="none"}
-document.querySelector(".hamburger").addEventListener("click",()=>{const n=document.querySelector("nav");n.style.display=n.style.display==="flex"?"none":"flex";if(n.style.display==="flex"){n.style.position="absolute";n.style.top="72px";n.style.right="5%";n.style.flexDirection="column";n.style.background="#fff";n.style.padding="15px";n.style.borderRadius="14px"}});
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
 
-document.getElementById("chatForm").addEventListener("submit",e=>{
- e.preventDefault(); const input=document.getElementById("chatInput"),q=input.value.trim(); if(!q)return;
- const body=document.getElementById("chatBody"); body.insertAdjacentHTML("beforeend",`<div class="user">${safe(q)}</div>`);
- let a="آپ Arabic Grammar، قرآن یا Arabic Language کلاس کے بارے میں سوال کر سکتے ہیں۔ مزید معلومات کے لیے WhatsApp پر رابطہ کریں۔";
- const x=q.toLowerCase();
- if(x.includes("grammar")||q.includes("گرامر"))a="Arabic Grammar میں نحو، صرف، جملوں کی ساخت اور عربی قواعد آسان انداز میں پڑھائے جائیں گے۔";
- else if(x.includes("quran")||q.includes("قرآن"))a="قرآن کی آن لائن کلاس بچوں اور بڑوں دونوں کے لیے رکھی جا سکتی ہے۔";
- else if(x.includes("class")||q.includes("کلاس"))a="کلاس کے لیے اپنی مطلوبہ کلاس اور طالب علم کی معلومات WhatsApp پر بھیجیں۔";
- else if(x.includes("price")||q.includes("فیس"))a="فیس اور اوقات کی تازہ معلومات کے لیے WhatsApp پر براہِ راست رابطہ کریں۔";
- body.insertAdjacentHTML("beforeend",`<div class="bot">${a}</div>`);input.value="";body.scrollTop=body.scrollHeight;
+  // Mobile navigation
+  const menuButton = document.querySelector(
+    ".menu-toggle, .hamburger"
+  );
+  const navigation = document.querySelector(
+    ".main-nav, nav"
+  );
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("is-open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+    });
+
+    navigation.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navigation.classList.remove("is-open");
+
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        !navigation.contains(event.target) &&
+        !menuButton.contains(event.target)
+      ) {
+        navigation.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // Current year
+  const yearElement = document.getElementById("currentYear");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
+  // Smooth scrolling for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const targetId = link.getAttribute("href");
+
+      if (!targetId || targetId === "#") {
+        return;
+      }
+
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+
+  // FAQ: allow the native details elements to work normally
+  document.querySelectorAll(".faq-item").forEach(function (item) {
+    item.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && item.open) {
+        item.open = false;
+      }
+    });
+  });
+
+  // Contact form: open an email draft with the entered details
+  const contactForm = document.querySelector(".contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+      const lines = [];
+
+      formData.forEach(function (value, key) {
+        lines.push(key + ": " + value);
+      });
+
+      const subject = encodeURIComponent(
+        "Course enquiry - Hameed Ur Rahman Academy"
+      );
+
+      const body = encodeURIComponent(lines.join("\n"));
+
+      const status = contactForm.querySelector(".form-status");
+
+      /*
+       * Replace academy@example.com below with your real
+       * academy email address before publishing.
+       */
+      const academyEmail = "academy@example.com";
+
+      if (status) {
+        status.textContent =
+          "Your email app will open so you can review and send your enquiry.";
+      }
+
+      window.location.href =
+        "mailto:" +
+        academyEmail +
+        "?subject=" +
+        subject +
+        "&body=" +
+        body;
+    });
+  }
+
+  // Back to top
+  document.querySelectorAll(".back-to-top").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+
 });
-function safe(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
